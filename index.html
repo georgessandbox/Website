@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#bt1").click(function () {
+                $("#collapse2").fadeOut(100, function () {
+                    // Animation complete.
+                    $("#collapse1").fadeToggle(100, function () {
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $("#collapse1").offset().top
+                        });
+                    });
+
+                });
+            });
+
+            $("#bt2").click(function () {
+                $("#collapse1").fadeOut(100, function () {
+                    // Animation complete.
+                    $("#collapse2").fadeToggle(100, function () {
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $("#collapse2").offset().top
+                        });
+                    });
+
+                });
+            });
+        });
+
+
+    </script>
+
+    <style>
+        h1 {
+            font-family: Sofia;
+            font-size: 10vh;
+            text-shadow: 2px 2px 8px;
+        }
+
+        * {
+            font-family: Raleway;
+            font-weight: bold;
+
+
+
+        }
+
+        button:focus {
+            background-color: transparent;
+        }
+
+        button:active {
+
+            background-color: yellow;
+        }
+
+        li {
+            margin-bottom: 2em;
+        }
+
+        hr.rounded {
+            border-top: 2px solid;
+        }
+
+        h2 {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid text-center" style="min-height:100vh; background-color: rgba(16, 173, 235, 0.603);">
+        <div class="row ">
+            <div class="col-sm-12 " style="margin-top: 15vh; margin-bottom: 3vh; ">
+                <img src="moi.jpg " class="rounded-circle heading shadow-lg " alt="Myself" style="  height: 30vh;">
+                <h1 style="margin-bottom: 0.8em;">George Saade</h1>
+                <h4>Ryerson University</h4>
+                <h5>Bachelor of Science (Honours)</h5>
+                <h5>Computer Science</h5>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>
+                    <button class="btn " id="bt1">
+                        <span>+ Projects</span>
+                    </button> |
+                    <button class="btn " id="bt2">
+                        <span>+ Work Experience</span>
+                    </button>
+                </p>
+                <div class="collapse " id="collapse1">
+                    <div class="card card-body " style="background-color:aquamarine">
+                        <div style="padding:  0% 10%; max-width: 1500px; " class="container-fluid text-center">
+                            <h2 style="margin-bottom: 1em;">Mood Tracker</h2>
+                            <div style=" float:left; ">
+
+                                <img src="app1.jpg" class="shadow-lg" alt="appScreenshot"
+                                    style="   width: 15em;   margin: 0.5em; max-width: 100%; border-style: solid;">
+                                <img src="app5.jpg" class="shadow-lg" alt="appScreenshot2"
+                                    style="   width: 15em; margin: 0.5em; max-width: 100%; border-style: solid;">
+                            </div>
+                            <div style=" text-align:justify; margin-top: 3em; ">
+                                <ul style="list-style-type:square; min-width:200px; overflow:auto;  ">
+                                    <li>Android / Kotlin / Java</li>
+                                    <li>Custom calendar library.</li>
+                                    <li>Track mood visually on a calendar.</li>
+                                    <li>Color each day with green for good mood, blue for normal, and red for bad mood.
+                                    </li>
+                                    <li>Add a little note to each day to express your feelings. </li>
+                                    <li>Get and forget. The app will send a notification every night at 9pm to add your
+                                        mood for the day right from the notification bar, without having to open the
+                                        app.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 style="margin: 2em 2em ;  "><a
+                                    href="https://play.google.com/store/apps/details?id=mood.example.tracker">
+                                    <img alt="app on google play" src="googleplay.png" width="300em">
+                                </a></h3>
+
+                            <div>
+                                <p>Example of adding a note.</p>
+                                <img src="app2.jpg" class="shadow-lg" alt="example1"
+                                    style="  width: 15em; margin: 0.5em; border-style: solid; max-width: 100%;">
+                                <img src="app3.jpg" class="shadow-lg" alt="example1"
+                                    style="   width: 15em; margin: 0.5em; ; border-style: solid; max-width: 100%;">
+                                <img src="app4.jpg" class="shadow-lg" alt="example1"
+                                    style="   width: 15em; margin: 0.5em; ; border-style: solid; max-width: 100%;">
+                            </div>
+
+
+
+
+
+                        </div>
+                        <div>
+                            <hr class="rounded" style=" float: clear; margin: 3em 0% ;">
+                        </div>
+                        <div style="padding:  0% 10%; max-width: 1500px;  " class="container-fluid text-center">
+                            <h2 style="margin-bottom: 1em;">Car Dealership</h2>
+                            <img src="appp1PNG.PNG" class="shadow-lg" alt="dealership"
+                                style="  float: left; width: 25em; margin: 0em 0em; max-width: 100%;border-style: solid; ">
+                            <div style=" text-align:justify; ">
+                                <ul style="list-style-type:square; min-width:200px; overflow:auto; ">
+                                    <li>Polymorphism / Inheritance / Encapsulation</li>
+                                    <li>Functionalities: sell, list, sort, filter, show stats.</li>
+                                    <li>Car dealership user interface which uses various object oriented
+                                        concepts.<br><br><br>
+                                        An inventory of cars is stored in a text file format. The app reads (Populate)
+                                        its inventory and
+                                        display (list) it using the provided text file (cars.txt). <br><br>
+                                        Add and remove cars in your inventory by modifying the cars.txt file following
+                                        the provided format.<br><br>
+                                        Polymorphism used to implement cars and electric cars as vehicles.</li>
+                                </ul>
+                            </div>
+                            <h3 style="margin:3em 0em ;"><a href="Dealership.zip"
+                                    style=" color: red; word-wrap: break-word; ">
+                                    🠗 Click to
+                                    download
+                                    and try
+                                    Dealership.jar + car.txt</a></h3>
+
+                            <div>
+                                <p>An Example.</p>
+                                <div style=" margin: 1em; width: 20em; display: inline-block; max-width: 100%; ">
+                                    <p>Filtering price between 35000 & 45000</p>
+                                    <img src="appp2.PNG" class="shadow-lg" alt="example1"
+                                        style="  width: 20em;  border-style: solid; max-width: 100%;  ">
+                                </div>
+                                <div style=" margin: 1em; width: 20em; display: inline-block; max-width: 100%; ">
+                                    <p>Sorting cars by price</p>
+                                    <img src="appp3.PNG" class="shadow-lg" alt="example1"
+                                        style=" width: 20em;  border-style: solid; max-width: 100%; ">
+                                </div>
+                                <div style=" margin: 1em; width: 20em; display: inline-block; max-width: 100%; ">
+                                    <p>Selling a ChevyVolt green</p>
+                                    <img src="appp4.PNG" class="shadow-lg" alt="example1"
+                                        style="  width: 20em;  border-style: solid; max-width: 100%; ">
+                                </div>
+
+                                <div style="margin: 1em; width: 20em; display: inline-block; max-width: 100%; ">
+                                    <p>Car is sold (No longer in inventory)</p>
+                                    <img src="appp5.PNG" class="shadow-lg" alt="example1"
+                                        style="  width: 20em; margin: 0em; border-style: solid; max-width: 100%; ">
+                                </div>
+                                <div style=" margin: 1em;  display: inline-block; max-width: 100%;">
+                                    <p>Code example of using maps to assign sales numbers to salespeople</p>
+                                    <img src="appp6.PNG" class="shadow-lg" alt="example1"
+                                        style="    margin: 1em; border-style: solid; max-width: 100%;">
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+                        <div>
+                            <hr class="rounded" style=" float: clear; margin: 3em 0% ;">
+                        </div>
+
+                        <div style="padding:  0% 10%; max-width: 1500px; " class="container-fluid text-center">
+                            <h2 style="margin-bottom: 1em;">Hobo Frogger</h2>
+
+                            <div style=" float: left;">
+                                <ul
+                                    style="list-style-type:square; min-width:200px; overflow:auto;  text-align:justify; ">
+                                    <li> Powered by Processing graphical library. <a
+                                            href="https://processing.org/">(processing.org)</a></li>
+                                    <li>The focus is to get adapted to an unfamiliar library and code a
+                                        simple
+                                        frogger-like
+                                        game in a timely fashion. </li>
+                                    <li>The player's goal is to hop on
+                                        different tracks
+                                        to avoid incoming trains for the longest time possible (a timer is showed at the
+                                        top)</li>
+                                    <li>The trains show up based on Poisson discrete
+                                        probability
+                                        distribution.</li>
+                                    <li>Hobos inside the tunnel might lie when shouting about coming train so be
+                                        careful.</li>
+                                </ul>
+
+                                <img src="frogger1.PNG" class="shadow-lg" alt="example1"
+                                    style=" float: left;  width: 40em; margin: 1em; ; border-style: solid; max-width: 100%;">
+                            </div>
+                            <div style=" float: right;">
+                                <p style="margin-top: 1em;"> The game changes difficulty dynamically by removing tracks
+                                    when
+                                    a milestone is reached </p>
+
+                                <img src="frogger2.PNG" class="shadow-lg" alt="example1"
+                                    style=" float: left;  width: 40em; margin: 1em; ; border-style: solid; max-width: 100%;">
+                            </div>
+                            <div style=" float: left;">
+                                <p style="margin-top: 1em;"> As well as lowering game difficulty by adding more tracks
+                                    when
+                                    player is hit by too
+                                    many
+                                    trains too soon.</p>
+
+                                <img src="frogger3.PNG" class="shadow-lg" alt="example1"
+                                    style=" float: left;  width: 40em; margin: 1em; ; border-style: solid; max-width: 100%;">
+                            </div>
+
+
+                            <h3 style="float:right ;"><a href="HOBOfrogger.jar"
+                                    style="color: red; word-wrap: break-word;  ">
+                                    🠗 Click to
+                                    download
+                                    executable
+                                    hoboFrogger.jar
+                                </a></h3>
+
+
+                        </div>
+
+                        <div>
+                            <hr class="rounded" style=" float: clear; margin: 3em 0% ;">
+                        </div>
+
+                        <div style="padding:  0% 10%; max-width: 1500px; " class="container-fluid text-center">
+                            <h2 style="margin-bottom: 1em;">Poker Hands Evaluator</h2>
+                            <h4>▪ Attempt at Implementation of code using two different languages.
+                            </h4><br>
+
+                            <div style=" float: left;">
+                                <p style="margin-top: 1em;">Difference of an implementation identifying hand of two
+                                    pairs
+                                    between Elixir & Pharo.
+                                </p>
+
+                                <img src="pr31.png" class="shadow-lg" alt="example1"
+                                    style=" float: left;  width: 40em; margin: 1em; ; border-style: solid; max-width: 100%;">
+                            </div>
+                            <div style=" float: right;">
+                                <p style="margin-top: 1em;">Difference of an implementation identifying hand of full
+                                    house between
+                                    Elixir & Pharo.</p>
+
+                                <img src="pr32.png" class="shadow-lg" alt="example1"
+                                    style=" float: left;  width: 40em; margin: 1em; ; border-style: solid; max-width: 100%;">
+                            </div>
+                            <div style=" float: left;">
+                                <p style="margin-top: 1em;"> Reading the cards and parsing them to their respective four
+                                    suits.</p>
+
+                                <img src="pr33.png" class="shadow-lg" alt="example1"
+                                    style=" float: left;  width: 40em; margin: 1em; ; border-style: solid; max-width: 100%;">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="collapse " id="collapse2">
+                    <div class="card card-body" style="background-color:antiquewhite">
+                        <div style="padding:  0% 10%; text-align:justify;">
+
+
+                            <p style="font-weight: bold;  font-size:  1.5em;">Barista 2017/2018 (one year)</p>
+                            <p style="font-weight: bold; font-size:  1.5em; overflow: auto;">Starbucks Coffee
+                                Company,
+                                Toronto</p>
+                            <ul style="list-style-type:square;   text-align:justify; ">
+                                <li> Greet customers as they come in and around the store and keep a positive
+                                    welcoming environment.
+                                </li>
+                                <li> Prepare and serve beverages following recipes and pay attention to customized
+                                    beverages.
+                                    Prepare food and
+                                    make sure everything is sanitary, hygienic, and clean.</li>
+                                <li>Be a team player with a team of up to 10 teammates, and maintain a calm demeanor
+                                    during
+                                    high-stress, high
+                                    volume periods and still be able to provide high quality ef icient service.
+
+                                </li>
+                                <li>
+                                    Approach customers if any help is needed and ensure customer’s satisfaction and
+                                    happiness.
+                                </li>
+                                <li>
+                                    Educate customers about products and beverages and clear out any ambiguity
+
+                                </li>
+                            </ul>
+
+                        </div>
+                        <hr class="solid" style="margin: 3em 10em;   border-top: solid 
+;">
+
+
+                        <div style="padding:  0% 10%; text-align:justify;">
+
+                            <p style="font-weight: bold; font-size: 1.5em; overflow: auto;">Technical Parts
+                                Specialist
+                                2016/2017 (about one year)
+                            </p>
+                            <p style="font-weight: bold;  font-size:  1.5em;">Sears Headquarters, Toronto
+                            </p>
+                            <p>(Employment ended in conjunction with Sears filing for bankruptcy and related
+                                lay-offs)
+                            </p>
+
+                            <ul style="list-style-type:square;   text-align:justify; ">
+                                <li>Receive on-phone inquiries and service orders on appliance parts and
+                                    accessories.
+                                </li>
+                                <li> Perform problem solving tasks by analysing technicians reports over the phone
+                                    and
+                                    conducting a parts research
+                                    to determine the correct required part and the availability of it, all through
+                                    complex on-line systems.</li>
+                                <li>Create accurate orders, fulfil requests and shipping details via standard
+                                    ordering
+                                    procedures.
+
+                                </li>
+                                <li>
+                                    Initiate calls with senior technicians for problem resolution in matters of
+                                    greater
+                                    complexity.
+                                </li>
+                                <li>
+                                    Work on of -phone activities, such as parts sourcing from suppliers or local
+                                    sources
+                                    to obtain best pricing and
+                                    delivery, creating parts templates, etc.
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+</body>
+
+</html>
